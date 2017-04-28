@@ -143,6 +143,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
         swipeRefreshLayout.setRefreshing(false);
 
+        updateEmptyView();
+
         if (data.getCount() != 0) {
             error.setVisibility(View.GONE);
         }
@@ -186,4 +188,29 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
         return super.onOptionsItemSelected(item);
     }
+
+    private void updateEmptyView() {
+        if (adapter.getItemCount() == 0) {
+            TextView tv = (TextView) findViewById(R.id.recycler_view_empty);
+            if (tv == null) {
+                int message = R.string.empty_stock_list;
+
+                if (!isNetworkAvailable(this)) {
+                    message = R.string.empty_stock_list_no_network;
+                }
+
+                tv.setText(message);
+            }
+        }
+    }
+
+    private boolean isNetworkAvailable(Context c) {
+        ConnectivityManager cm =
+                (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork != null &&
+                activeNetwork.isConnectedOrConnecting();
+    }
+
 }
