@@ -90,7 +90,9 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
             holder.change.setText(percentage);
         }
 
-
+        String contentDescriptionFormat = context.getString(R.string.stock_item_content_description_format);
+        String contentDescription = String.format(contentDescriptionFormat, holder.symbol, holder.price, holder.change);
+        holder.itemView.setContentDescription(contentDescription);
     }
 
     @Override
@@ -118,10 +120,13 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
         @BindView(R.id.change)
         TextView change;
 
+        View itemView;
+
         StockViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
+            this.itemView = itemView;
         }
 
         @Override
