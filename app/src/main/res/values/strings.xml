@@ -33,5 +33,7 @@
     <string name="toast_no_connectivity">Will refresh when network available.</string>
     <string name="fab_add_stock_content_description">Add a stock item</string>
     <string name="stock_item_content_description_format">Current price of stock %1$s is %2$s. It has changed by %3$s.</string>
+    <string name="empty_stock_list">No Stock Information Available</string>
+    <string name="empty_stock_list_no_network">No stock information available. The network is not available to fetch stock data</string>
 
 </resources>
