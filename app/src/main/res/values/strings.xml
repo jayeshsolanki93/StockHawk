@@ -31,5 +31,7 @@
 
     <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
+    <string name="fab_add_stock_content_description">Add a stock item</string>
+    <string name="stock_item_content_description_format">Current price of stock %1$s is %2$s. It has changed by %3$s.</string>
 
 </resources>
