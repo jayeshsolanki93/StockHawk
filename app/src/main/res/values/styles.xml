@@ -12,12 +12,26 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="PercentChangeTextStyle.Large" parent="PercentChangeTextStyle">
+        <item name="android:textSize">25sp</item>
+    </style>
+
     <style name="BidPriceTextStyle">
         <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BidPriceTextStyle.Large" parent="BidPriceTextStyle">
+        <item name="android:textSize">30sp</item>
     </style>
 
     <style name="StockSymbolTextStyle">
         <item name="android:textSize">25sp</item>
         <item name="android:textAllCaps">true</item>
     </style>
+
+    <style name="StockSymbolTextStyle.Large" parent="StockSymbolTextStyle">
+        <item name="android:textSize">50sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
 </resources>
