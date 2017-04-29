@@ -36,5 +36,7 @@
     <string name="empty_stock_list">No Stock Information Available</string>
     <string name="empty_stock_list_no_network">No stock information available. The network is not available to fetch stock data</string>
     <string name="invalid_stock_symbol">Invalid Stock Symbol!</string>
+    <string name="default_stock_price">$3.142</string>
+    <string name="default_stock_change">+ 0.14 (0.10 %)</string>
 
 </resources>

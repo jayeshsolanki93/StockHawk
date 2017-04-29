@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.udacity.stockhawk.ui.DetailActivity">
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        style="@style/StockSymbolTextStyle.Large"
+        tools:text="@string/default_stocks_yahoo"/>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/symbol"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:layout_marginBottom="@dimen/smaller_margin"
+        style="@style/BidPriceTextStyle.Large"
+        tools:text="@string/default_stock_price"/>
+
+    <TextView
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/symbol"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/smaller_margin"
+        android:layout_marginBottom="@dimen/smaller_margin"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="end"
+        android:layout_alignBaseline="@+id/price"
+        android:layout_toEndOf="@+id/price"
+        style="@style/PercentChangeTextStyle.Large"
+        tools:text="@string/default_stock_change"/>
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/price"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+</RelativeLayout>
