@@ -91,7 +91,10 @@ class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHolder> {
         }
 
         String contentDescriptionFormat = context.getString(R.string.stock_item_content_description_format);
-        String contentDescription = String.format(contentDescriptionFormat, holder.symbol, holder.price, holder.change);
+        String contentDescription = String.format(contentDescriptionFormat,
+                holder.symbol.getText(),
+                holder.price.getText(),
+                holder.change.getText());
         holder.itemView.setContentDescription(contentDescription);
     }
 
